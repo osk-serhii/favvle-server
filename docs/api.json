@@ -4,12 +4,16 @@
     "version": "1.0",
     "title": "FAVVLE",
     "description": "API documentation for FAVVLE",
-    "contact": {}
+    "contact": {
+      "email": "idea399@outlook.com",
+      "name": "Alexander Popov"
+    }
   },
-  "host": "localhost:8000",
+  "host": "favvle-server.herokuapp.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "http",
+    "https"
   ],
   "consumes": [
     "application/json"
