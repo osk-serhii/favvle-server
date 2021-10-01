@@ -1,0 +1,329 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "FAVVLE",
+    "description": "API documentation for FAVVLE",
+    "contact": {}
+  },
+  "host": "localhost:8000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/signin": {
+      "post": {
+        "summary": "Email Sign In",
+        "tags": [
+          "Authentication"
+        ],
+        "operationId": "EmailSignIn",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/EmailSignInRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/signup": {
+      "post": {
+        "summary": "Email Sign Up",
+        "tags": [
+          "Authentication"
+        ],
+        "operationId": "EmailSignUp",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/EmailSignUpRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/signin-google": {
+      "post": {
+        "summary": "Google Sign In",
+        "tags": [
+          "Authentication"
+        ],
+        "operationId": "GoogleSignIn",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GoogleSignInRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/signup-google": {
+      "post": {
+        "summary": "Google Sign Up",
+        "tags": [
+          "Authentication"
+        ],
+        "operationId": "GoogleSignUp",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GoogleSignUpRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/signin-facebook": {
+      "post": {
+        "summary": "Facebook Sign In",
+        "tags": [
+          "Authentication"
+        ],
+        "operationId": "FacebookSignIn",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/FacebookSignInRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/signup-facebook": {
+      "post": {
+        "summary": "Facebook Sign Up",
+        "tags": [
+          "Authentication"
+        ],
+        "operationId": "FacebookSignUp",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/FacebookSignUpRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "EmailSignInRequest": {
+      "title": "EmailSignInRequest",
+      "example": {
+        "email": "example@gmail.com",
+        "password": "password"
+      },
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "email",
+        "password"
+      ]
+    },
+    "EmailSignUpRequest": {
+      "title": "EmailSignUpRequest",
+      "example": {
+        "email": "example@gmail.com",
+        "password": "password"
+      },
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "email",
+        "password"
+      ]
+    },
+    "GoogleSignInRequest": {
+      "title": "GoogleSignInRequest",
+      "example": {
+        "email": "example@gmail.com",
+        "id": "123456"
+      },
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "email",
+        "id"
+      ]
+    },
+    "GoogleSignUpRequest": {
+      "title": "GoogleSignUpRequest",
+      "example": {
+        "email": "example@gmail.com",
+        "id": "123456"
+      },
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "email",
+        "id"
+      ]
+    },
+    "FacebookSignInRequest": {
+      "title": "FacebookSignInRequest",
+      "example": {
+        "email": "example@gmail.com",
+        "id": "123456"
+      },
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "email",
+        "id"
+      ]
+    },
+    "FacebookSignUpRequest": {
+      "title": "FacebookSignUpRequest",
+      "example": {
+        "email": "example@gmail.com",
+        "id": "123456"
+      },
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "email",
+        "id"
+      ]
+    }
+  },
+  "tags": [
+    {
+      "name": "Authentication"
+    }
+  ]
+}
