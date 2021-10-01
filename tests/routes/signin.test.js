@@ -2,7 +2,7 @@ const app = require("../../app");
 const supertest = require("supertest");
 const User = require("../../models/User");
 
-require('../initDb');
+require('../initTest');
 
 const SAMPLE_DATA = {
     first: {
