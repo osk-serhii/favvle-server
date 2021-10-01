@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "jest"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
@@ -19,6 +20,14 @@
     "swagger-ui-express": "^4.1.6"
   },
   "devDependencies": {
-    "nodemon": "^2.0.13"
+    "jest": "^27.2.4",
+    "nodemon": "^2.0.13",
+    "supertest": "^6.1.6"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
   }
 }

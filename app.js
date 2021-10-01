@@ -7,10 +7,6 @@ const swaggerDocument = require('./docs/api.json');
 
 require('dotenv').config(); // use .env file as config
 
-const connectDb = require('./config/db').connectDb;
-const { options } = require('./routes/index');
-
-
 // App setup
 const app = express();
 
@@ -28,11 +24,4 @@ app.use('/swagger', swaggerUi.serve, swaggerUi.setup(swaggerDocument, {
     explorer: false
 }));
 
-// connect db and run the server
-connectDb().then(async () => {
-    const PORT = process.env.PORT || 8000;
-
-    app.listen(PORT, () =>
-        console.log(`App is listening on port ${PORT}!`),
-    );
-});
+module.exports = app;

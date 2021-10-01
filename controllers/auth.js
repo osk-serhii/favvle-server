@@ -101,19 +101,18 @@ exports.signupEmail = function (req, res) {
     if (!email || !password) {
         res.json({
             success: false,
-            message: 'Please enter email and password.'
+            message: 'Validation error.'
         });
     } else {
         User.findOne({ email }, function(err, user) {
             if (err) {
                 console.log(err);
             } else {
-                console.log(user)
                 if (user) {
                     return res.json({
                         success: false,
-                        message: 'Email is already exists.'
-                    })
+                        message: 'Already exists.'
+                    });
                 }
 
                 if (!user) {
@@ -144,18 +143,17 @@ exports.signupGoogle = function (req, res) {
     if (!email || !id) {
         res.json({
             success: false,
-            message: 'Email or id is invalid.'
+            message: 'Validation error.'
         });
     } else {
         User.findOne({ email: email }, function(err, user) {
             if (err) {
                 console.log(err);
             } else {
-                console.log(user)
                 if (user) {
                     return res.json({
                         success: false,
-                        message: 'Email is already exists.'
+                        message: 'Already exists.'
                     })
                 }
 
@@ -190,18 +188,17 @@ exports.signupFacebook = function (req, res) {
     if (!email || !id) {
         res.json({
             success: false,
-            message: 'Email or id is invalid.'
+            message: 'Validation error.'
         });
     } else {
         User.findOne({ email: email }, function(err, user) {
             if (err) {
                 console.log(err);
             } else {
-                console.log(user)
                 if (user) {
                     return res.json({
                         success: false,
-                        message: 'Email is already exists.'
+                        message: 'Already exists.'
                     })
                 }
 
